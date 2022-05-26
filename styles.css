@@ -1,0 +1,97 @@
+html {
+  height: 100%;
+  font-family: sans-serif;
+}
+
+body {
+  background-color: #0093e9;
+  background-image: linear-gradient(160deg, #0093e9 0%, #80d0c7 100%);
+  height: 100%;
+  margin: 0;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.myHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.myHeader h1 {
+  margin: 40px 0 10px 0;
+  color: #2b2b2b;
+}
+
+.myHeader p {
+  margin: 0 0 5px 0;
+  padding: 0;
+  color: #3c3c3c;
+}
+
+.myContent {
+  background: transparent;
+  display: flex;
+  flex: 1;
+  flex-wrap: wrap;
+  padding: 0 50px;
+  height: 100%;
+}
+
+.cardContainer {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.cardContainer label {
+  color: #2b2b2b;
+  font-weight: bold;
+}
+
+.card {
+  width: 250px;
+  height: 350px;
+  background: linear-gradient(
+    135deg,
+    rgba(9, 9, 121, 1) 0%,
+    rgba(0, 212, 255, 1) 100%
+  );
+  border: 1px solid lightgray;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 15px;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.cardCaption {
+  text-align: center;
+  display: flex;
+  flex: 1;
+}
+
+#card1 {
+  min-width: 250px;
+  min-height: 350px;
+  background-image: url("/img/survey.png");
+  background-size: cover;
+  border-radius: 20px;
+}
+
+#card2 {
+  min-width: 250px;
+  min-height: 350px;
+  background-image: url("/img/tribute.png");
+  background-size: cover;
+  border-radius: 20px;
+}
