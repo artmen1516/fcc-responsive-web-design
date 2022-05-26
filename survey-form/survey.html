@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="survey.css" />
+  </head>
+  <body>
+    <main class="layer">
+      <div class="myTitle">
+        <h1 id="title">freeCodeCamp Survey Form</h1>
+        <p id="description">
+          Thank you for taking the time to help us improve the platform
+        </p>
+      </div>
+      <div class="myForm flex-container">
+        <form id="survey-form" class="myForm2 flex-container">
+          <label id="name-label">Name</label>
+          <input id="name" type="text" required placeholder="Enter your name" />
+          <label id="email-label">Email</label>
+          <input
+            id="email"
+            type="email"
+            required
+            placeholder="Enter your email"
+          />
+          <label id="number-label">Number</label>
+          <input
+            id="number"
+            type="number"
+            required
+            min="18"
+            max="99"
+            placeholder="Age"
+          />
+          <label id="dropdown-label"
+            >Which option best describes your current role?</label
+          >
+          <select id="dropdown" name="Option">
+            <option disabled selected value>Select current role</option>
+            <option value="Student">Student</option>
+            <option value="Worker">Worker</option>
+            <option value="Other">Other</option>
+          </select>
+          <radio>
+            <p>Would you recommend us?</p>
+            <div class="myRadioItem flex-container">
+              <input type="radio" id="yes-label" name="myradio" value="Yes" />
+              <label for="yes-label">Yes</label>
+            </div>
+            <div class="myRadioItem flex-container">
+              <input type="radio" id="yes-label" name="myradio" value="No" />
+              <label for="no-label">No</label>
+            </div>
+            <div class="myRadioItem flex-container">
+              <input type="radio" id="yes-label" name="myradio" value="Maybe" />
+              <label for="maybe-label">Maybe</label>
+            </div>
+          </radio>
+          <div class="myCheckContainer flex-container">
+            <p>Are you related to this technologies?</p>
+            <div class="myCheckItem flex-container">
+              <input id="front-end" type="checkbox" value="Front-end" />
+              <label for="front-end">Front-End</label>
+            </div>
+            <div class="myCheckItem flex-container">
+              <input id="back-end" type="checkbox" value="Back-end" />
+              <label for="back-end">Back-End</label>
+            </div>
+            <div class="myCheckItem flex-container">
+              <input id="data-science" type="checkbox" value="Data-science" />
+              <label for="data-science">Data-science</label>
+            </div>
+            <div class="myCheckItem flex-container">
+              <input id="databases" type="checkbox" value="Databases" />
+              <label for="databases">Databases</label>
+            </div>
+          </div>
+          <div class="myTextArea flex-container">
+            <p>Any comments or suggestions?</p>
+            <textarea
+              name="textarea"
+              rows="6"
+              cols="50"
+              placeholder="Enter your comment here..."
+            ></textarea>
+          </div>
+          <input type="submit" id="submit" />
+        </form>
+      </div>
+    </main>
+  </body>
+</html>
