@@ -1,0 +1,27 @@
+.myNavbar {
+  margin: 0;
+  padding: 0 15px;
+  display: flex;
+  flex-direction: row;
+  column-gap: 20px;
+  height: 50px;
+  background-color: #1a1a1a;
+  text-decoration: none;
+  align-items: center;
+  justify-content: right;
+}
+
+.myNavbar a:link {
+  text-decoration: none;
+  color: #9f9f9f;
+}
+.myNavbar a:visited {
+  text-decoration: none;
+}
+.myNavbar a:hover {
+  text-decoration: none;
+  color: #616161;
+}
+.myNavbar a:active {
+  text-decoration: none;
+}
