@@ -17,6 +17,7 @@
 }
 .myNavbar a:visited {
   text-decoration: none;
+  color: #9f9f9f;
 }
 .myNavbar a:hover {
   text-decoration: none;
