@@ -20,7 +20,6 @@ body {
   display: flex;
   flex-direction: column;
   flex: 1;
-  flex-grow: ;
 }
 
 .myTitle {
@@ -40,24 +39,32 @@ body {
 
 .myForm {
   display: flex;
-  flex: 1;
   flex-direction: column;
   align-items: center;
 }
 
 .myForm2 {
   background-color: rgba(16, 18, 71, 0.9);
-  padding: 30 30 30 30;
   display: flex;
   flex-direction: column;
   text-align: left;
   color: white;
   row-gap: 10px;
   padding: 20px;
+  min-width: 0;
 }
 
-input {
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="submit"],
+select {
   height: 30px;
+}
+
+textarea {
+  resize: none;
+  width: 98%;
 }
 
 #dropdown {
