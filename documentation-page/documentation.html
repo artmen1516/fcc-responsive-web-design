@@ -1,0 +1,192 @@
+<DOCTYPE html>
+  <html>
+    <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Technical Documentation</title>
+      <link rel="stylesheet" type="text/css" href="documentation.css" />
+    </head>
+    <body class="mybody flex-container">
+      <div class="wrapper">
+        <nav id="navbar flex-container">
+          <header class="myheader">
+            <header id="mynavtitle">
+              PyScript Documentation
+            </header>
+            <a class="nav-link" href="#What_is_PyScript?">What is PyScript?</a>
+            <a class="nav-link" href="#What_does_it_mean_for_the_world?"
+              >What does it mean for the world?</a
+            >
+            <a class="nav-link" href="#What_is_the_magic_behind?"
+              >What is the magic behind?</a
+            >
+            <a class="nav-link" href="#How_to_use_PyScript?"
+              >How to use PyScript?</a
+            >
+            <a class="nav-link" href="#The_future_of_PyScript"
+              >The future of PyScript</a
+            >
+            <a class="nav-link" href="#References">References</a>
+          </header>
+        </nav>
+        <main id="main-doc flex-container">
+          <section id="What_is_PyScript?" class="main-section">
+            <header>
+              What is PyScript?
+            </header>
+            <p>
+              Developed by the team from Anaconda including Peter Wang, Fabio
+              Pliger, and Philipp Rudiger, PyScript is, as Peter mentioned in
+              his talk, “a system for interleaving Python in HTML (like PHP)".
+            </p>
+            <p>
+              This means you can write and run Python code in HTML, call
+              Javascript libraries in PyScript, and do all your web development
+              in Python. Sounds amazing!
+            </p>
+          </section>
+          <section id="What_does_it_mean_for_the_world?" class="main-section">
+            <header>What does it mean for the world?</header>
+            <p>
+              The most obvious thing is that with PyScript, we can now write
+              Python (and potentially other languages) in HTML and build web
+              applications. PyScript makes the power of Python accessible to a
+              far greater audience of front-end developers and creators.
+            </p>
+            <p>
+              With PyScript, we no longer need to worry about deployment.
+              PyScript provides the “architectural shift beyond the cloud.”
+              Everything will happen in your web browser. As data scientists, we
+              can share our dashboards and our models in an html file, which
+              will run code whenever others open the file in a web browser.
+            </p>
+          </section>
+          <section id="What_is_the_magic_behind?" class="main-section">
+            <header>What is the magic behind?</header>
+            <p>
+              PyScript is currently built on Pyodide, which is a “port of
+              CPython to WebAssembly/Emscripten.” PyScript supports writing and
+              running Python code in a browser, and it will provide support for
+              other languages in the future.
+            </p>
+            <p>
+              The fundamental technology that makes it possible to write
+              websites in Python is WebAssembly. When WebAssembly was originally
+              developed, web browsers only supported Javascript.
+            </p>
+          </section>
+          <section id="How_to_use_PyScript?" class="main-section">
+            <header>How to use PyScript?</header>
+            <p>
+              The alpha release of PyScript can be found on pyscript.net. The
+              code is available at https://github.com/pyscript. Follow these
+              instructions to give it a try. PyScript lets you write Python in
+              html using the following three main components:
+            </p>
+            <ul>
+              <li>
+                py-env defines the Python packages needed to run your Python
+                code.
+              </li>
+              <li>
+                py-script is where you write your Python code that gets executed
+                within the web page
+              </li>
+              <li>
+                py-repl creates a REPL (read-eval-print loop) component that
+                evaluates the code users enter and displays the results.
+              </li>
+            </ul>
+            <subheader>Hello World example</subheader>
+            <pre>
+              <code>
+&lt;py-script&gt;
+  "Hello World"
+&lt;/py-script&gt;
+              </code>
+            </pre>
+            <p>or, alternatively, pass the source file directly</p>
+            <pre>
+              <code>
+&lt;py-script 
+src="/my_own_file.py"&gt; 
+&lt;/py-script&gt;
+              </code>
+            </pre>
+            <subheader>py-env example</subheader>
+            <p>
+              Here is an example on how we can define our Python environment in
+              an HTML using py-env. In this example, we load the packages bokeh,
+              numpy, pandas, and scikit-learn into our environment.
+            </p>
+            <pre>
+              <code>
+&lt;py-env&gt;
+  - bokeh
+  - numpy
+  - pandas
+  - scikit-learn
+&lt;/py-env&gt;
+              </code>
+            </pre>
+            <subheader>py-script example</subheader>
+            <p>
+              This example demonstrates a Panel dashboard with streaming data.
+              As you can see in the code, we are able to write our familiar
+              Python code in py-script like we normally do in a Python file. If
+              you do not like to write your Python code directly under
+              py-script, you can also use a Python file as the source code like
+              this:
+            </p>
+            <pre>
+              <code>
+&lt;py-script 
+src="/python-file.py"&gt; 
+&lt;/py-script&gt;
+              </code>
+            </pre>
+            <subheader>Pandas example</subheader>
+            <pre>
+              <code>
+import pandas as pd
+import numpy as np
+
+s = pd.Series([1, 3, 5, np.nan, 6, 8])
+s
+              </code>
+            </pre>
+            <p>
+              You can find many examples on the PyScript Github page, including
+              a D3 visualization and a Mario game with computer vision.
+            </p>
+          </section>
+          <section id="The_future_of_PyScript" class="main-section">
+            <header>The future of PyScript</header>
+            <p>
+              PyScript brings Python to the browser. I’m very excited about this
+              new innovation and can’t wait to see how it unfolds in the
+              community.
+            </p>
+            <p>Stay tuned for many great new features coming soon!</p>
+          </section>
+          <section id="References" class="main-section">
+            <header>References</header>
+            <ul>
+              <a href="https://anaconda.cloud/pyscript-python-in-the-browser"
+                ><li>
+                  https://anaconda.cloud/pyscript-python-in-the-browser
+                </li></a
+              >
+              <a href="https://engineering.anaconda.com/2022/04/welcome-pyscript.html"
+              ><li>
+                https://engineering.anaconda.com/2022/04/welcome-pyscript.html
+              </li>
+              <a href="https://github.com/anaconda/pyscript"
+              ><li>https://github.com/anaconda/pyscript</li>
+            </ul>
+          </section>
+        </main>
+      </div>
+    </body>
+  </html></DOCTYPE
+>

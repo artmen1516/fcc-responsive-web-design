@@ -95,3 +95,11 @@ body {
   background-size: cover;
   border-radius: 20px;
 }
+
+#card3 {
+  min-width: 250px;
+  min-height: 350px;
+  background-image: url("./img/documentation.png");
+  background-size: cover;
+  border-radius: 20px;
+}

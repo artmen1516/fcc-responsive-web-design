@@ -1,0 +1,94 @@
+html,
+body {
+  overflow: auto;
+}
+
+html {
+  height: 100%;
+  font-family: sans-serif;
+  margin: 0;
+}
+
+body {
+  height: 100%;
+  margin: 0;
+}
+
+.wrapper {
+  display: flex;
+  flex: 1;
+  flex-flow: row nowrap;
+}
+
+.myheader {
+  display: flex;
+  flex-flow: column nowrap;
+  flex-grow: 1;
+  flex-shrink: 1;
+  min-width: 0px;
+  max-width: 300px;
+}
+
+#mynavtitle {
+  padding: 15px 0;
+  text-align: center;
+  color: #1a1a1a;
+}
+
+nav header a {
+  display: inline-block;
+  min-width: 0;
+  word-wrap: break-word;
+}
+
+main {
+  min-width: 130px;
+  padding: 30px;
+  display: flex;
+  flex-grow: 1;
+  flex-shrink: 2;
+  flex-flow: column nowrap;
+  border-left: 1px solid gray;
+}
+
+main section pre {
+  overflow-x: auto;
+  white-space: pre-wrap;
+  white-space: -moz-pre-wrap;
+  white-space: -pre-wrap;
+  white-space: -o-pre-wrap;
+  word-wrap: break-word;
+}
+
+.nav-link {
+  padding: 15px;
+  border-top: 1px solid gray;
+}
+
+.myheader a:link {
+  text-decoration: none;
+  color: #616161;
+}
+.myheader a:visited {
+  text-decoration: none;
+  color: #616161;
+}
+.myheader a:hover {
+  text-decoration: none;
+  color: #000000;
+}
+.myheader a:active {
+  text-decoration: none;
+}
+
+main section header {
+  padding-top: 10px;
+  font-size: 1.5rem;
+}
+
+main section p,
+li {
+  color: #616161;
+  word-wrap: break-word;
+  text-align: justify;
+}
